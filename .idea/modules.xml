@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Nhn_.iml" filepath="$PROJECT_DIR$/Nhn_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nhn_prac/nhn_prac.iml" filepath="$PROJECT_DIR$/nhn_prac/nhn_prac.iml" />
+    </modules>
+  </component>
+</project>
