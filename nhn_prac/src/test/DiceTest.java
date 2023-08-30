@@ -3,13 +3,14 @@ package test;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class DiceTest {
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Dice 객체 생성 테스트")
     void diceConstructorTest() {
         Dice dice = new Dice(4);
@@ -17,7 +18,7 @@ public class DiceTest {
         Assertions.assertEquals(4, dice.getRan_num());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("addDice 테스트")
     void adddiceTest() {
         Dice dice1 = new Dice(1);
@@ -68,7 +69,7 @@ public class DiceTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("DiceCalculator.getIndex Test")
     void getIndexOfTest() {
         Dice dice = new Dice(5);
@@ -77,7 +78,7 @@ public class DiceTest {
         Assertions.assertEquals("a1b2c3", DiceCalculator.getIndexOf(str, dice.getRan_num()));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Dice 객체 생성 반복 테스트")
     void diceInteratorTest() {
         int[] arr = {1, 2, 3, 4, 5, 6};
@@ -99,13 +100,13 @@ public class DiceTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Dice 객체 생성 테스트 (number : -1)")
     void negativeDiceConstructor() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> new Dice(-1));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Dice 객체 생성 테스트 (number : 7)")
     void oversixDice() {
         try {

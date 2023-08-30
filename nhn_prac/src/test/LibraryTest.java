@@ -2,12 +2,13 @@ package test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class LibraryTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("preCondition Test")
     void preConditionTest() {
 //        try {
@@ -27,7 +28,7 @@ public class LibraryTest {
         Assertions.assertEquals(size, library.getLibrary());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Library add() test")
     void addTest() {
         Library library = new Library(1);
@@ -37,7 +38,7 @@ public class LibraryTest {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Library 꽉 찬 경우 테스트")
     void fulllibrary() {
         Library library = new Library(1);
@@ -46,7 +47,7 @@ public class LibraryTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> library.add("book2"));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Library 책이 중복된 경우")
     void sameNameLibrary() {
         Library library = new Library(2);
@@ -56,7 +57,7 @@ public class LibraryTest {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Library delete Test")
     void libraryDelteTest() {
         Library library = new Library(1);
@@ -66,7 +67,7 @@ public class LibraryTest {
         Assertions.assertEquals(0, library.getCount());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Library empty delete")
     void libraryEmptyDelete() {
         Library library = new Library(1);
@@ -76,7 +77,7 @@ public class LibraryTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> library.delete("java1"));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Library missingbook delete")
     void missingBookDelete() {
         Library library = new Library(1);

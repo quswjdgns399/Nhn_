@@ -7,6 +7,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="junit.jupiter" level="project" />
   </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="516707a5-d800-4c52-95b1-7adc42f135ef" />
